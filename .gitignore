@@ -20,5 +20,4 @@
 .git
 .buildpath
 .project
-Behat
 composer.phar

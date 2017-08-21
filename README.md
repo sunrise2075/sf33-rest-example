@@ -18,29 +18,33 @@ composer update
 </code>
 
 
-## 1.3 Install Behat from command line
+## 1.3 Install Behat
 
-You can also clone the project with Git by running:
+### 1.3.1 You can also clone the project with Git by running in terminal:
 
 <code>
-git clone git://github.com/Behat/Behat.git && cd Behat
+composer require behat/behat
 </code>
 
-Then download `composer.phar` and run `install` command:
+### 1.3.2 Then download `composer.phar` and run `install` command:
 
 <code>
 wget -nc https://getcomposer.org/composer.phar
 php composer.phar install
 </code>
 
-Run the following command from project root directory in terminal to use behat:
+### 1.3.3 Run the following command from project root directory in terminal to use behat:
 
 <code>
 bin/behat
 </code>
 
-Create `features/` folder in current directory:
+### 1.3.4 Initialize BDD architecture and create relevant folder in current directory:
 
 <code>
-behat --init
+vendor/behat/behat/bin/behat --init
 </code>
+
+# 2. Write User feature
+
+1. 
