@@ -41,6 +41,8 @@ vendor/behat/behat/bin/behat --init
 
 # 2. Write User feature
 
-## 2.1 Create .feature folder
+## 2.1 Create feature for User resource
 
-create `src/AppBundle/Features/Context` folder and relevant files
+- create `src/AppBundle/Features/Context` folder 
+
+- create `user.feature` and `UserSetupContext.php`
