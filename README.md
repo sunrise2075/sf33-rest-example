@@ -33,13 +33,7 @@ wget -nc https://getcomposer.org/composer.phar
 php composer.phar install
 </code>
 
-### 1.3.3 Run the following command from project root directory in terminal to use behat:
-
-<code>
-bin/behat
-</code>
-
-### 1.3.4 Initialize BDD architecture and create relevant folder in current directory:
+### 1.3.3 Initialize BDD architecture
 
 <code>
 vendor/behat/behat/bin/behat --init
