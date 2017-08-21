@@ -41,4 +41,6 @@ vendor/behat/behat/bin/behat --init
 
 # 2. Write User feature
 
-1. 
+## 2.1 Create .feature folder
+
+create `src/AppBundle/Features/Context` folder and relevant files
