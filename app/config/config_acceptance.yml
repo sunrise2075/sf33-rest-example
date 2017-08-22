@@ -1,0 +1,18 @@
+imports:
+    - { resource: config_test.yml }
+
+framework:
+    profiler:
+        only_exceptions: false
+        collect: true
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+    
+doctrine:
+    dbal:
+        dbname: "%database_name%_acceptance"

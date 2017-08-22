@@ -62,4 +62,7 @@ class UserSetupContext implements Context, SnippetAcceptingContext
 			$query->execute();
 		}
 	}
+	
+
+	
 }

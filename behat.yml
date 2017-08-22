@@ -1,0 +1,23 @@
+# behat.yml
+
+default:
+
+  suites:
+    default:
+      type: symfony_bundle
+      bundle: AppBundle
+      contexts:
+        - FeatureContext:
+             doctrine: "@doctrine"
+
+  extensions:
+    Behat\Symfony2Extension:
+      kernel:
+        env: "acceptance"
+        debug: "true"
+
+    Behat\MinkExtension:
+      base_url: "http://127.0.0.1:8000/app_acceptance.php/"
+      sessions:
+        defaults:
+          symfony2: ~
