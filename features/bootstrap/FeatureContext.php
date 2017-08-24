@@ -38,82 +38,18 @@ class FeatureContext implements Context, SnippetAcceptingContext
      */
     public function createSchema()
     {
-    	echo '-- DROP SCHEMA -- ' . "\n\n\n";
-    	$this->schemaTool->dropSchema($this->classes);
-    	
     	echo '-- CREATE SCHEMA -- ' . "\n\n\n";
     	$this->schemaTool->createSchema($this->classes);
     }
     
     /**
-     * @Given there are Users with the following details:
+     * @AfterScenario 
      */
-    public function thereAreUsersWithTheFollowingDetails(TableNode $table)
+    public function dropSchema()
     {
-    	throw new PendingException();
+    	 echo '-- DROP SCHEMA -- ' . "\n\n\n";
+    	 $this->schemaTool->dropSchema($this->classes);
     }
     
-    /**
-     * @Given there are Accounts with the following details:
-     */
-    public function thereAreAccountsWithTheFollowingDetails(TableNode $table)
-    {
-    	throw new PendingException();
-    }
-    
-    /**
-     * @Given I am successfully logged in with username: :arg1, and password: :arg2
-     */
-    public function iAmSuccessfullyLoggedInWithUsernameAndPassword($arg1, $arg2)
-    {
-    	throw new PendingException();
-    }
-    
-    /**
-     * @Given when consuming the endpoint I use the :arg1 of :arg2
-     */
-    public function whenConsumingTheEndpointIUseTheOf($arg1, $arg2)
-    {
-    	throw new PendingException();
-    }
-    
-    /**
-     * @When I send a :arg1 request to :arg2
-     */
-    public function iSendARequestTo($arg1, $arg2)
-    {
-    	throw new PendingException();
-    }
-    
-    /**
-     * @Then the response code should :arg1
-     */
-    public function theResponseCodeShould($arg1)
-    {
-    	throw new PendingException();
-    }
-    
-    /**
-     * @Then the response header :arg1 should be equal to :arg2
-     */
-    public function theResponseHeaderShouldBeEqualTo($arg1, $arg2)
-    {
-    	throw new PendingException();
-    }
-    
-    /**
-     * @Then the response should contain json:
-     */
-    public function theResponseShouldContainJson(PyStringNode $string)
-    {
-    	throw new PendingException();
-    }
-    
-    /**
-     * @When I send a :arg1 request to :arg2 with body:
-     */
-    public function iSendARequestToWithBody($arg1, $arg2, PyStringNode $string)
-    {
-    	throw new PendingException();
-    }
+
 }

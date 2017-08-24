@@ -149,3 +149,8 @@ Run behat in project root folder in the terminal:
 ## 2.5.6 Copy code snippets as requested
 
 Copy code snippets into `features/bootstrap/FeatureContext.php`
+
+## 2.6 Create User data from Behat background
+
+### 2.6.1 Install `FosUserBundle`
+
