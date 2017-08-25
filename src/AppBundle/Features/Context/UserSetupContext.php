@@ -41,7 +41,7 @@ class UserSetupContext implements Context, SnippetAcceptingContext
 		foreach ($users->getColumnsHash() as $key => $val) {
 			
 			$user = $this->userManager->createUser();
-			
+// 			We might need this line to check the content of  $user or $val
 // 			exit(\Doctrine\Common\Util\Debug::dump($val));
 			
 			$user->setEnabled(true);
@@ -61,8 +61,7 @@ class UserSetupContext implements Context, SnippetAcceptingContext
 					'username' => $val['username'],
 					'email' => $val['email']
 			])
-			->getQuery()
-			;
+			->getQuery();
 			
 			$query->execute();
 		}
@@ -95,18 +94,18 @@ class UserSetupContext implements Context, SnippetAcceptingContext
 	/**
 	 * @When I send a :arg1 request to :arg2
 	 */
-	public function iSendARequestTo($arg1, $arg2)
-	{
-		throw new PendingException();
-	}
+// 	public function iSendARequestTo($arg1, $arg2)
+// 	{
+// 		throw new PendingException();
+// 	}
 	
 	/**
 	 * @Then the response code should :arg1
 	 */
-	public function theResponseCodeShould($arg1)
-	{
-		throw new PendingException();
-	}
+// 	public function theResponseCodeShould($arg1)
+// 	{
+// 		throw new PendingException();
+// 	}
 	
 	/**
 	 * @Then the response header :arg1 should be equal to :arg2

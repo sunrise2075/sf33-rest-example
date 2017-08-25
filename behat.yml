@@ -12,15 +12,12 @@ default:
         - AppBundle\Features\Context\UserSetupContext:
             userManager: "@fos_user.user_manager"
             em: "@doctrine.orm.entity_manager"
+        - AppBundle\Features\Context\RestApiContext:
+            client: "@csa_guzzle.client.local_test_api"
+            dummyDataPath: "%paths.base%/features/Dummy/"
 
   extensions:
     Behat\Symfony2Extension:
       kernel:
         env: "acceptance"
         debug: "true"
-
-    Behat\MinkExtension:
-      base_url: "http://127.0.0.1:8000/app_acceptance.php/"
-      sessions:
-        defaults:
-          symfony2: ~

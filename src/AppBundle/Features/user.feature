@@ -13,9 +13,10 @@ Feature: Manage Users data via the RESTful API
 #    And there are Accounts with the following details:
 #    | uid | name     | users |
 #    | a1  | account1 | u1    |
-    And I am successfully logged in with username: "peter", and password: "testpass"
-    And when consuming the endpoint I use the "headers/content-type" of "application/json"
+#    And I am successfully logged in with username: "peter", and password: "testpass"
+#    And when consuming the endpoint I use the "headers/content-type" of "application/json"
 
+@t
   Scenario: User cannot GET a Collection of User objects
     When I send a "GET" request to "/users"
     Then the response code should 405

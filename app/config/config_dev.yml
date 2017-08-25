@@ -39,3 +39,10 @@ monolog:
 
 #swiftmailer:
 #    delivery_addresses: ['me@example.com']
+
+csa_guzzle:
+    logger: true
+    clients:
+        local_test_api:
+            config:
+                base_url: http://localhost:8000/app_dev.php/

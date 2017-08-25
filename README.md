@@ -154,3 +154,33 @@ Copy code snippets into `features/bootstrap/FeatureContext.php`
 
 ### 2.6.1 Install `FosUserBundle`
 
+## 2.7 Create ApiContext
+
+### 2.7.1 Switch from mink to guzzle
+
+Delete these 3 entries in `composer.json`:
+
+	behat/mink 
+	behat/mink-browserkit-driver 
+	behat/mink-extension
+	composer update
+
+
+Run the following lines in terminal:
+
+	composer require csa/guzzle-bundle:^1.3
+	composer require behatch/contexts:^2.4
+
+Delete the following configuration from `behat.yml`:
+
+    Behat\MinkExtension:
+      base_url: "http://127.0.0.1:8000/app_acceptance.php/"
+      sessions:
+        defaults:
+          symfony2: ~
+ 
+ Enable guzzle in `AppKernel.php` like this:
+ 
+ 
+ 
+ ^2.4

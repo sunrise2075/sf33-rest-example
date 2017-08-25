@@ -16,3 +16,11 @@ swiftmailer:
 doctrine:
     dbal:
         dbname: "%database_name%_acceptance"
+
+        
+csa_guzzle:
+    logger: true
+    clients:
+        local_test_api:
+            config:
+                base_url: http://localhost:8000/app_acceptance.php/
