@@ -336,7 +336,8 @@ class RestApiContext implements Context
 	{
 		$etalon = json_decode($this->replacePlaceHolder($jsonString->getRaw()), true);
 		$actual = $this->response->json();
-		
+		\Doctrine\Common\Util\Debug::dump($etalon);
+		\Doctrine\Common\Util\Debug::dump($actual);
 		if (null === $etalon) {
 			throw new \RuntimeException(
 					"Can not convert etalon to json:\n" . $this->replacePlaceHolder($jsonString->getRaw())
@@ -375,7 +376,10 @@ class RestApiContext implements Context
 	public function theResponseHeaderShouldBeEqualTo($header, $value)
 	{
 		$header = $this->response->getHeaders()[$header];
-		Assertions::assertContains($value, $header);
+// 		\Doctrine\Common\Util\Debug::dump(gettype($header));
+// 		\Doctrine\Common\Util\Debug::dump(gettype($value));
+//      here the variable $header is an array with 0 index as the desired element 
+		Assertions::assertContains($header[0], $value);
 	}
 	
 	/**

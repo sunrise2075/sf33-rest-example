@@ -110,18 +110,18 @@ class UserSetupContext implements Context, SnippetAcceptingContext
 	/**
 	 * @Then the response header :arg1 should be equal to :arg2
 	 */
-	public function theResponseHeaderShouldBeEqualTo($arg1, $arg2)
-	{
-		throw new PendingException();
-	}
+// 	public function theResponseHeaderShouldBeEqualTo($arg1, $arg2)
+// 	{
+// 		throw new PendingException();
+// 	}
 	
 	/**
 	 * @Then the response should contain json:
 	 */
-	public function theResponseShouldContainJson(PyStringNode $string)
-	{
-		throw new PendingException();
-	}
+// 	public function theResponseShouldContainJson(PyStringNode $string)
+// 	{
+// 		throw new PendingException();
+// 	}
 	
 	/**
 	 * @When I send a :arg1 request to :arg2 with body:
