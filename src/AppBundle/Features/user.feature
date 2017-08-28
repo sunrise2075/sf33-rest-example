@@ -31,7 +31,6 @@ Feature: Manage Users data via the RESTful API
       {
         "id": "u1",
         "email": "peter@test.com",
-        "username": "peter",
-        "accounts": []
+        "username": "peter"
       }
       """
